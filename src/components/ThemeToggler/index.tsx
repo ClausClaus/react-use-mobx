@@ -1,7 +1,7 @@
 import { observer } from 'mobx-react';
 import { useStores } from '../../hooks';
 
-const ThemeToggler = observer(() => {
+const ThemeToggler = () => {
   const { themeStore } = useStores();
 
   return (
@@ -11,5 +11,5 @@ const ThemeToggler = observer(() => {
       <button onClick={() => themeStore.setTheme('dark')}>黑夜</button>
     </>
   );
-});
-export default ThemeToggler;
+};
+export default observer(ThemeToggler);
